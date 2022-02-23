@@ -1,32 +1,50 @@
+@import url(https://fonts.googleapis.com/css2?family=Satisfy&display=swap);
+
 html, body {
-  background: #5C258D;
-  background: -webkit-linear-gradient(to right, #4389A2, #5C258D);
-  background: linear-gradient(to right, #4389A2, #5C258D);
-  height: 100%;
+  background:black;
   min-width: 500px;
 }
 
-#citation {
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.citation {
   font-size: 2em;
+  color: white;
   font-family: 'Satisfy', curve;
+  text-align: center;
+  margin: 1rem;
   line-height: 1.3em;
   letter-spacing: 1px;
 }
 
-#citation:before {
+.citation:before {
     content: open-quote;
 }
 
-#citation:after {
+.citation:after {
     content: close-quote;
 }
 
-#auteur {
+.containerBarre {
+  background-color: #ff5e62;
+  width: 100%;
+  height: 0.5rem;
+}
+
+.auteur {
+  color: white;
+  text-align: center;
+  margin: 1rem;
   font-size: 1.5em;
   font-style: italic;
 }
 
-#nouveau {
+.nouveau {
   background: #ff9966;
   background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
   background: linear-gradient(to right, #ff5e62, #ff9966);

@@ -19,9 +19,9 @@ let citationsTable = [
 
 //variables
 
-let citation = document.querySelector("#citation");
-let auteur = document.querySelector("#auteur");
-let bnt = document.querySelector("#nouveau");
+let citation = document.querySelector(".citation");
+let auteur = document.querySelector(".auteur");
+let bnt = document.querySelector(".nouveau");
 
 let dernier = 0;
 let nombreAleatoire = 0;
