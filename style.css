@@ -1,12 +1,14 @@
 @import url(https://fonts.googleapis.com/css2?family=Satisfy&display=swap);
 
 html, body {
-  background:black;
-  min-width: 500px;
+  background: #5C258D;
+  background: -webkit-linear-gradient(to right, #4389A2, #5C258D);
+  background: linear-gradient(to right, #4389A2, #5C258D);
 }
 
 .container {
   display: flex;
+  margin-top: 20vh;
   flex-direction: column;
   align-items: center;
 
@@ -46,6 +48,10 @@ html, body {
 
 .nouveau {
   background: #ff9966;
+  margin-top: 3rem;
+  height: 2rem;
+  width: 10rem;
+  border-radius: 10px;
   background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
   background: linear-gradient(to right, #ff5e62, #ff9966);
   cursor: pointer;
