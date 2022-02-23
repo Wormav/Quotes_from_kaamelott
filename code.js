@@ -1,17 +1,3 @@
-//fontion génére nombre aléatoire compris entre ....
-
-function entierAleatoire(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function changeOnClick(nombre){
-    nombre = nombreAleatoire ;
-    citation.textContent = citationsTable[nombre] [0]
-    auteur.textContent = citationsTable[nombre] [1]
-};
-
-
-
 // tableau de citations
 
 let citationsTable = [
@@ -37,9 +23,23 @@ let citation = document.querySelector("#citation");
 let auteur = document.querySelector("#auteur");
 let bnt = document.querySelector("#nouveau");
 
-let dernier = citationsTable[0] [0];
-let nombreAleatoire = entierAleatoire(0, 2);
+let dernier = 0;
+let nombreAleatoire = 0;
 
+//fonction pour générer entier aléatoire
 
-bnt.addEventListener('click', changeOnClick);
+function genererNombreEntier(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
 
+// evénement du click du btn
+
+bnt.addEventListener("click", () => {
+  do {
+      nombreAleatoire = genererNombreEntier(citationsTable.length);
+  } while (nombreAleatoire == dernier);
+
+  citation.textContent = citationsTable[nombreAleatoire][0];
+  auteur.textContent = citationsTable [nombreAleatoire] [1];
+  dernier = nombreAleatoire;
+});
